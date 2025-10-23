@@ -117,26 +117,26 @@ const HarvestApp = () => {
 
         {/* Navigation */}
         <nav className="bg-white shadow-sm sticky top-0 z-40">
-          <div className="max-w-7xl mx-auto px-6 py-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-6">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-3">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 sm:gap-4 md:gap-6 flex-shrink min-w-0">
                 <img 
                   src={uicLogo}
                   alt="UIC Logo"
-                  className="h-16 object-contain"
+                  className="h-10 sm:h-12 md:h-16 object-contain flex-shrink-0"
                 />
-                <div className="h-12 w-px bg-gray-300"></div>
+                <div className="h-8 sm:h-10 md:h-12 w-px bg-gray-300 flex-shrink-0"></div>
                 <img 
                   src={harvestLogo}
                   alt="HARVEST Chicago Logo"
-                  className="h-16 object-contain"
+                  className="h-10 sm:h-12 md:h-16 object-contain flex-shrink-0"
                 />
               </div>
               
-              <div className="flex items-center gap-4">
+              <div className="flex items-center flex-shrink-0">
                 <button 
                   onClick={() => setShowLoginModal(true)}
-                  className="px-6 py-2 rounded-lg text-white font-medium transition hover:opacity-90 hover:scale-105 transform"
+                  className="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-lg text-white font-medium text-xs sm:text-sm md:text-base transition hover:opacity-90 whitespace-nowrap"
                   style={{backgroundColor: '#001E62'}}
                 >
                   Sign In
@@ -147,22 +147,22 @@ const HarvestApp = () => {
         </nav>
 
         {/* Hero Section */}
-        <main className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold mb-6 leading-tight animate-fade-in">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight animate-fade-in">
               <span className="inline-block hover:scale-110 transition-transform duration-300" style={{color: '#001E62'}}>Empowering</span>{' '}
               <span className="inline-block hover:scale-110 transition-transform duration-300 bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">Communities</span>
               <br />
               <span className="inline-block hover:scale-110 transition-transform duration-300" style={{color: '#001E62'}}>Through Food &</span>{' '}
               <span className="inline-block hover:scale-110 transition-transform duration-300" style={{color: '#D50032'}}>Health</span>
             </h1>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-0 animation-delay-200">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-0 animation-delay-200">
               Connecting Chicago communities to resources that matter—food security, 
               health navigation, and cancer prevention support.
             </p>
             <button 
               onClick={() => setShowLoginModal(true)}
-              className="mt-8 px-8 py-4 rounded-lg text-white font-semibold text-lg transition hover:opacity-90 hover:scale-105 transform shadow-lg animate-slide-up opacity-0 animation-delay-400"
+              className="mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-white font-semibold text-base sm:text-lg transition hover:opacity-90 hover:scale-105 transform shadow-lg animate-slide-up opacity-0 animation-delay-400"
               style={{backgroundColor: '#8BC34A'}}
             >
               Get Started
@@ -170,63 +170,63 @@ const HarvestApp = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up opacity-0 animation-delay-200">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center transition-transform hover:scale-110 hover:rotate-6" 
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up opacity-0 animation-delay-200">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg mb-4 flex items-center justify-center transition-transform hover:scale-110 hover:rotate-6" 
                    style={{backgroundColor: '#8BC34A15'}}>
-                <MapPin style={{color: '#8BC34A'}} size={28} />
+                <MapPin style={{color: '#8BC34A'}} size={24} className="sm:w-7 sm:h-7" />
               </div>
-              <h3 className="text-xl font-bold mb-3" style={{color: '#001E62'}}>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{color: '#001E62'}}>
                 Find Resources
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Access food assistance programs, community kitchens, and nutrition support across Chicago
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up opacity-0 animation-delay-400">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center transition-transform hover:scale-110 hover:rotate-6" 
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up opacity-0 animation-delay-400">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg mb-4 flex items-center justify-center transition-transform hover:scale-110 hover:rotate-6" 
                    style={{backgroundColor: '#D5003215'}}>
-                <Building2 style={{color: '#D50032'}} size={28} />
+                <Building2 style={{color: '#D50032'}} size={24} className="sm:w-7 sm:h-7" />
               </div>
-              <h3 className="text-xl font-bold mb-3" style={{color: '#001E62'}}>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{color: '#001E62'}}>
                 Health Navigation
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Connect with health navigators and partnered clinics for coordinated care and support
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up opacity-0 animation-delay-500">
-              <div className="w-14 h-14 rounded-lg mb-4 flex items-center justify-center transition-transform hover:scale-110 hover:rotate-6" 
+            <div className="bg-white rounded-xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up opacity-0 animation-delay-500 sm:col-span-2 md:col-span-1">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg mb-4 flex items-center justify-center transition-transform hover:scale-110 hover:rotate-6" 
                    style={{backgroundColor: '#001E6215'}}>
-                <BookOpen style={{color: '#001E62'}} size={28} />
+                <BookOpen style={{color: '#001E62'}} size={24} className="sm:w-7 sm:h-7" />
               </div>
-              <h3 className="text-xl font-bold mb-3" style={{color: '#001E62'}}>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3" style={{color: '#001E62'}}>
                 Learn & Thrive
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Evidence-based dietary education for cancer prevention and overall wellness
               </p>
             </div>
           </div>
 
           {/* Mission Statement */}
-          <div className="bg-white rounded-2xl p-12 shadow-lg max-w-4xl mx-auto animate-slide-up opacity-0 animation-delay-500">
-            <h2 className="text-3xl font-bold mb-6 text-center hover:scale-105 transition-transform duration-300 inline-block w-full" style={{color: '#001E62'}}>
+          <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-lg max-w-4xl mx-auto animate-slide-up opacity-0 animation-delay-500">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center hover:scale-105 transition-transform duration-300 inline-block w-full" style={{color: '#001E62'}}>
               Our Mission
             </h2>
-            <p className="text-xl text-gray-700 text-center leading-relaxed mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center leading-relaxed mb-6 sm:mb-8">
               HARVEST Chicago brings together technology, healthcare, and community partnerships 
               to address food insecurity and reduce dietary-related cancer risks. We're building 
               a platform where access to healthy food and health resources is just a click away.
             </p>
-            <div className="flex justify-center items-center gap-6 pt-6 border-t">
+            <div className="flex justify-center items-center gap-4 sm:gap-6 pt-4 sm:pt-6 border-t">
               <div className="text-center transform hover:scale-110 transition-transform duration-300">
                 <img 
                   src={uicLogo}
                   alt="UIC"
-                  className="w-20 h-20 object-contain mx-auto mb-2"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain mx-auto mb-2"
                 />
                 <p className="text-xs text-gray-500">Partner</p>
               </div>
@@ -234,7 +234,7 @@ const HarvestApp = () => {
                 <img 
                   src={harvestLogo}
                   alt="HARVEST"
-                  className="w-20 h-20 object-contain mx-auto mb-2"
+                  className="w-16 h-16 sm:w-20 sm:h-20 object-contain mx-auto mb-2"
                 />
                 <p className="text-xs text-gray-500">Partner</p>
               </div>
@@ -245,7 +245,7 @@ const HarvestApp = () => {
         {/* Login Modal */}
         {showLoginModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-2xl max-w-md w-full p-8 relative shadow-2xl">
+            <div className="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl">
               <button 
                 onClick={() => setShowLoginModal(false)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
@@ -253,11 +253,11 @@ const HarvestApp = () => {
                 <X size={24} />
               </button>
 
-              <h3 className="text-3xl font-bold mb-8" style={{color: '#001E62'}}>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8" style={{color: '#001E62'}}>
                 Sign In
               </h3>
               
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
@@ -336,48 +336,49 @@ const HarvestApp = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Top Navigation */}
       <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <img 
                 src={harvestLogo}
                 alt="HARVEST Logo"
-                className="h-10 object-contain"
+                className="h-8 sm:h-10 object-contain"
               />
               <div>
-                <div className="font-bold text-lg" style={{color: '#8BC34A'}}>HARVEST</div>
+                <div className="font-bold text-base sm:text-lg" style={{color: '#8BC34A'}}>HARVEST</div>
                 <div className="text-xs text-gray-500 capitalize">{userRole}</div>
               </div>
             </div>
             <button 
               onClick={handleLogout}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition"
+              className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition"
             >
-              <LogOut size={18} />
-              Sign Out
+              <LogOut size={16} className="sm:w-4.5 sm:h-4.5" />
+              <span className="hidden sm:inline">Sign Out</span>
+              <span className="sm:hidden">Out</span>
             </button>
           </div>
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-3" style={{color: '#001E62'}}>
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-3" style={{color: '#001E62'}}>
             Five Pillars
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600">
             Explore the core components of HARVEST Chicago's integrated approach to food security and health
           </p>
         </div>
 
         {/* Pillar Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
           {pillars.map((pillar) => (
             <button
               key={pillar.id}
               onClick={() => setSelectedPillar(selectedPillar === pillar.id ? null : pillar.id)}
-              className={`bg-white rounded-xl p-6 text-left transition-all duration-200 border-2 ${
+              className={`bg-white rounded-xl p-5 sm:p-6 text-left transition-all duration-200 border-2 ${
                 selectedPillar === pillar.id 
                   ? 'shadow-lg scale-105' 
                   : 'shadow-sm hover:shadow-md'
@@ -386,9 +387,9 @@ const HarvestApp = () => {
                 borderColor: selectedPillar === pillar.id ? pillar.color : 'transparent'
               }}
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-3 sm:mb-4">
                 <div 
-                  className="w-14 h-14 rounded-xl flex items-center justify-center"
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center"
                   style={{backgroundColor: pillar.color + '15', color: pillar.color}}
                 >
                   {pillar.icon}
@@ -397,14 +398,14 @@ const HarvestApp = () => {
                   className={`transition-transform duration-200 ${
                     selectedPillar === pillar.id ? 'rotate-180' : ''
                   }`}
-                  size={20}
+                  size={18}
                   style={{color: pillar.color}}
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2" style={{color: '#001E62'}}>
+              <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2" style={{color: '#001E62'}}>
                 {pillar.title}
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs sm:text-sm text-gray-600">
                 {pillar.shortDesc}
               </p>
             </button>
@@ -414,12 +415,12 @@ const HarvestApp = () => {
         {/* Expanded Pillar Content */}
         {selectedPillar && (
           <div 
-            className="bg-white rounded-xl shadow-lg p-8 border-l-4"
+            className="bg-white rounded-xl shadow-lg p-6 sm:p-8 border-l-4"
             style={{borderLeftColor: pillars.find(p => p.id === selectedPillar)?.color}}
           >
-            <div className="flex items-start gap-4 mb-6">
+            <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
               <div 
-                className="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center flex-shrink-0"
                 style={{
                   backgroundColor: pillars.find(p => p.id === selectedPillar)?.color + '15',
                   color: pillars.find(p => p.id === selectedPillar)?.color
@@ -428,29 +429,29 @@ const HarvestApp = () => {
                 {pillars.find(p => p.id === selectedPillar)?.icon}
               </div>
               <div>
-                <h2 className="text-3xl font-bold mb-2" style={{color: '#001E62'}}>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2" style={{color: '#001E62'}}>
                   {pillars.find(p => p.id === selectedPillar)?.title}
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   {pillars.find(p => p.id === selectedPillar)?.shortDesc}
                 </p>
               </div>
             </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8">
               {pillars.find(p => p.id === selectedPillar)?.content}
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button 
-                className="px-6 py-3 rounded-lg text-white font-medium transition hover:opacity-90 shadow-md flex items-center gap-2"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-white font-medium transition hover:opacity-90 shadow-md flex items-center justify-center gap-2 text-sm sm:text-base"
                 style={{backgroundColor: pillars.find(p => p.id === selectedPillar)?.color}}
               >
                 Access Resources
-                <ExternalLink size={18} />
+                <ExternalLink size={16} className="sm:w-4.5 sm:h-4.5" />
               </button>
               <button 
-                className="px-6 py-3 rounded-lg font-medium transition hover:bg-gray-50 border-2"
+                className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition hover:bg-gray-50 border-2 text-sm sm:text-base"
                 style={{
                   borderColor: pillars.find(p => p.id === selectedPillar)?.color,
                   color: pillars.find(p => p.id === selectedPillar)?.color
@@ -463,8 +464,8 @@ const HarvestApp = () => {
         )}
 
         {!selectedPillar && (
-          <div className="bg-blue-50 rounded-xl p-8 text-center border border-blue-100">
-            <p className="text-gray-600">
+          <div className="bg-blue-50 rounded-xl p-6 sm:p-8 text-center border border-blue-100">
+            <p className="text-sm sm:text-base text-gray-600">
               Select a pillar above to view detailed information and access resources
             </p>
           </div>
